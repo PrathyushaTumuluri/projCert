@@ -3,41 +3,38 @@
   hosts: all
 
   tasks:
-    - name: test
+    - name: run as sudo
       shell: >
-        echo "hi!!"
-#     - name: run as sudo
-#       shell: >
-#         sudo su -
-#       register: sudo_result
+        sudo su -
+      register: sudo_result
 
-#     - debug: msg="{{ sudo_result }}"
+    - debug: msg="{{ sudo_result }}"
 
-#     - name: set source
-#       shell: >
-#         source /etc/profile.d/puppet-agent.sh
-#       register: source_result
+    - name: set source
+      shell: >
+        source /etc/profile.d/puppet-agent.sh
+      register: source_result
 
-#     - debug: msg="{{ source_result }}"
+    - debug: msg="{{ source_result }}"
 
-#     - name: export path
-#       shell: >
-#         export PATH=/opt/puppetlabs/bin:$PATH
-#       register: export_path_result
+    - name: export path
+      shell: >
+        export PATH=/opt/puppetlabs/bin:$PATH
+      register: export_path_result
 
-#     - debug: msg="{{ export_path_result }}"
+    - debug: msg="{{ export_path_result }}"
 
-#     - name: set config
-#       shell: >
-#         puppet config set server kmaster --section main
-#       register: set_config_result
+    - name: set config
+      shell: >
+        puppet config set server kmaster --section main
+      register: set_config_result
 
-#     - debug: msg="{{ set_config_result }}"
+    - debug: msg="{{ set_config_result }}"
 
-#     - name: run ssl bootstrap
-#       shell: >
-#         puppet ssl bootstrap
-#       register: ssl_bootstrap_result
+    - name: run ssl bootstrap
+      shell: >
+        puppet ssl bootstrap
+      register: ssl_bootstrap_result
 
-#     - debug: msg="{{ ssl_bootstrap_result }}"
+    - debug: msg="{{ ssl_bootstrap_result }}"
 
