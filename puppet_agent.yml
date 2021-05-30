@@ -26,14 +26,14 @@
     
     - name: puppet version
       shell: >
-        puppet -V
+        /opt/puppetlabs/bin/puppet -V
       register: puppet_version
 
     - debug: msg="{{ puppet_version }}"
 
     - name: set config
       shell: >
-        puppet config set server kmaster --section main
+        /opt/puppetlabs/bin/puppet config set server kmaster --section main
       register: set_config_result
 
     - debug: msg="{{ set_config_result }}"
