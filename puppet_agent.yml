@@ -38,10 +38,10 @@
 
     - debug: msg="{{ set_config_result }}"
 
-#     - name: run ssl bootstrap
-#       shell: >
-#         puppet ssl bootstrap
-#       register: ssl_bootstrap_result
+    - name: run ssl bootstrap
+      shell: >
+        puppet ssl bootstrap
+      register: ssl_bootstrap_result
 
-#     - debug: msg="{{ ssl_bootstrap_result }}"
+    - debug: msg="{{ ssl_bootstrap_result }}"
 
