@@ -23,6 +23,13 @@
       register: export_path_result
 
     - debug: msg="{{ export_path_result }}"
+    
+    - name: puppet version
+      shell: >
+        puppet -V
+      register: puppet_version
+
+    - debug: msg="{{ puppet_version }}"
 
     - name: set config
       shell: >
