@@ -26,15 +26,15 @@
 
     - name: set config
       shell: >
-        sudo puppet config set server kmaster --section main
+        sudo -s puppet config set server kmaster --section main
       register: set_config_result
 
     - debug: msg="{{ set_config_result }}"
 
-    - name: run ssl bootstrap
-      shell: >
-        sudo puppet ssl bootstrap
-      register: ssl_bootstrap_result
+#     - name: run ssl bootstrap
+#       shell: >
+#         sudo -s puppet ssl bootstrap
+#       register: ssl_bootstrap_result
 
-    - debug: msg="{{ ssl_bootstrap_result }}"
+#     - debug: msg="{{ ssl_bootstrap_result }}"
 
