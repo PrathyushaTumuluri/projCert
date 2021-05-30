@@ -37,6 +37,13 @@
       register: set_config_result
 
     - debug: msg="{{ set_config_result }}"
+    
+    - name: set config from file
+      shell: >
+        sudo echo ./configfiletxt > /etc/puppetlabs/puppet/puppet.conf
+      register: set_config_from_file_result
+
+    - debug: msg="{{ set_config_from_file_result }}"
 
     - name: run ssl bootstrap
       shell: >
