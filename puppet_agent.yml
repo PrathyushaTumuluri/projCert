@@ -40,7 +40,7 @@
 
     - name: run ssl bootstrap
       shell: >
-        puppet ssl bootstrap
+        /opt/puppetlabs/bin/puppet ssl bootstrap
       register: ssl_bootstrap_result
 
     - debug: msg="{{ ssl_bootstrap_result }}"
