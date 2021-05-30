@@ -12,14 +12,14 @@
 
     - name: set source
       shell: >
-        sudo source /etc/profile.d/puppet-agent.sh
+        sudo -s source /etc/profile.d/puppet-agent.sh
       register: source_result
 
     - debug: msg="{{ source_result }}"
 
     - name: export path
       shell: >
-        sudo export PATH=/opt/puppetlabs/bin:$PATH
+        sudo -s export PATH=/opt/puppetlabs/bin:$PATH
       register: export_path_result
 
     - debug: msg="{{ export_path_result }}"
