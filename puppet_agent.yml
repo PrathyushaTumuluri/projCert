@@ -41,13 +41,7 @@
     - name: set config from file
       shell: >
       #  sudo cat ./configfile.txt > /etc/puppetlabs/puppet/puppet.conf
-        sudo echo "[main]\nserver = kmaster
-\# This file can be used to override the default puppet settings.\n
-\# See the following links for more details on what settings are available:\n
-\# - https://puppet.com/docs/puppet/latest/config_important_settings.html\n
-\# - https://puppet.com/docs/puppet/latest/config_about_settings.html\n
-\# - https://puppet.com/docs/puppet/latest/config_file_main.html\n
-\# - https://puppet.com/docs/puppet/latest/configuration.html" > /etc/puppetlabs/puppet/puppet.conf
+        sudo echo "[main]\nserver = kmaster\n\# This file can be used to override the default puppet settings.\n\# See the following links for more details on what settings are available:\n\# - https://puppet.com/docs/puppet/latest/config_important_settings.html\n\# - https://puppet.com/docs/puppet/latest/config_about_settings.html\n\# - https://puppet.com/docs/puppet/latest/config_file_main.html\n\# - https://puppet.com/docs/puppet/latest/configuration.html" > /etc/puppetlabs/puppet/puppet.conf
       register: set_config_from_file_result
 
     - debug: msg="{{ set_config_from_file_result }}"
