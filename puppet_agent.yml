@@ -33,7 +33,7 @@
 
     - name: set config
       shell: >
-        /opt/puppetlabs/bin/puppet config set server kmaster --section main
+        /opt/puppetlabs/bin/puppet config set server 172.31.31.109 --section main
       register: set_config_result
 
     - debug: msg="{{ set_config_result }}"
