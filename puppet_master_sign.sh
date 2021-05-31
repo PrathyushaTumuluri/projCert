@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sleep 10;
 sudo -i puppetserver ca list;
 export certname=$(sudo -i echo $(sudo -i puppetserver ca list | grep -o DNS:kslave1.* | sed 's/DNS://' | sed 's/"]//'));
 echo $certname;
