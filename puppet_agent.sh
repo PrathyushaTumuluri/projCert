@@ -19,7 +19,7 @@ sudo -i /opt/puppetlabs/bin/puppet -V;
 # sudo -i /opt/puppetlabs/bin/puppet config set server puppet --section main;
 
 # set config from file
-sudo -i -u edureka cat ./configfile.txt > /etc/puppetlabs/puppet/puppet.conf;
+sudo -i -u edureka cat ./configfile.txt > /etc/puppetlabs/puppet/puppet.conf <<< DevOps12;
 #echo "[main]\nserver = puppet\ndns_alt_names=ip-172-31-31-109.ap-south-1.compute.internal,ip-172-31-29-129.ap-south-1.compute.internal" > /etc/puppetlabs/puppet/puppet.conf
 
 # verify the set config
