@@ -26,5 +26,5 @@ sudo -i /opt/puppetlabs/bin/puppet config set dns_alt_names ip-172-31-31-109.ap-
 echo "verify the set config";
 sudo -i cat /etc/puppetlabs/puppet/puppet.conf;
 
-# # run ssl bootstrap
-# /opt/puppetlabs/bin/puppet ssl bootstrap
+echo "run ssl bootstrap";
+/opt/puppetlabs/bin/puppet ssl bootstrap
