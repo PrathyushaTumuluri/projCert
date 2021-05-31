@@ -2,7 +2,7 @@
 
 # run as sudo
 export HISTIGNORE='*sudo -S*';
-sudo -S -k -i <<< DevOps12;
+sudo -S -k -i <<< "DevOps12";
 
 # set source
 source /etc/profile.d/puppet-agent.sh
