@@ -12,8 +12,8 @@ sudo -i source /etc/profile.d/puppet-agent.sh;
 echo "export path";
 sudo -i export PATH=/opt/puppetlabs/bin:$PATH;
     
-echo "puppet version";
-sudo -i /opt/puppetlabs/bin/puppet -V;
+# echo "puppet version";
+# sudo -i /opt/puppetlabs/bin/puppet -V;
 
 echo "set config";
 sudo -i /opt/puppetlabs/bin/puppet config set server puppet --section main;
