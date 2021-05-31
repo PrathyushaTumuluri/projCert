@@ -11,7 +11,7 @@ sudo -i export PATH=/opt/puppetlabs/bin:$PATH;
 
 echo "set config";
 sudo -i /opt/puppetlabs/bin/puppet config set server puppet --section main;
-sudo -i /opt/puppetlabs/bin/puppet config set dns_alt_names ip-172-31-31-109.ap-south-1.compute.internal,ip-172-31-29-129.ap-south-1.compute.internal --section main;
+#sudo -i /opt/puppetlabs/bin/puppet config set dns_alt_names ip-172-31-31-109.ap-south-1.compute.internal,ip-172-31-29-129.ap-south-1.compute.internal --section main;
 
 echo "verify the set config";
 sudo -i cat /etc/puppetlabs/puppet/puppet.conf;
