@@ -13,7 +13,7 @@
     - name: run as sudo
       shell: >
         export HISTIGNORE='*sudo -S*';
-        sudo -S -k -i <<< $sudo_pwd
+        sudo -S -k -i <<< $sudo_pwd;
       register: sudo_result
 
     - name: set source
