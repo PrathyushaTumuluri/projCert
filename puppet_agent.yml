@@ -1,0 +1,61 @@
+---
+- name: Puppet agent install and configure on slave machine
+  hosts: all
+
+  tasks:
+#     - name: run as sudo
+#       shell: >
+#         sudo su -
+#       register: sudo_result
+
+#     - debug: msg="{{ sudo_result }}"
+
+    - name: run as sudo
+      shell: >
+        export HISTIGNORE='*sudo -S*';
+        sudo -S -k -i <<< $sudo_pwd
+      register: sudo_result
+
+    - name: set source
+      shell: >
+        source /etc/profile.d/puppet-agent.sh
+      register: source_result
+
+    - debug: msg="{{ source_result }}"
+
+    - name: export path
+      shell: >
+        export PATH=/opt/puppetlabs/bin:$PATH
+      register: export_path_result
+
+    - debug: msg="{{ export_path_result }}"
+    
+    - name: puppet version
+      shell: >
+        /opt/puppetlabs/bin/puppet -V
+      register: puppet_version
+
+    - debug: msg="{{ puppet_version }}"
+
+#     - name: set config
+#       shell: >
+#         /opt/puppetlabs/bin/puppet config set server puppet --section main
+#       register: set_config_result
+
+#     - debug: msg="{{ set_config_result }}"
+
+    
+    - name: set config from file
+      shell: >
+        cat ./configfile.txt > /etc/puppetlabs/puppet/puppet.conf
+      # echo "[main]\nserver = puppet\ndns_alt_names=ip-172-31-31-109.ap-south-1.compute.internal,ip-172-31-29-129.ap-south-1.compute.internal" > /etc/puppetlabs/puppet/puppet.conf
+      register: set_config_from_file_result
+
+    - debug: msg="{{ set_config_from_file_result }}"
+
+    - name: run ssl bootstrap
+      shell: >
+        /opt/puppetlabs/bin/puppet ssl bootstrap
+      register: ssl_bootstrap_result
+
+    - debug: msg="{{ ssl_bootstrap_result }}"
