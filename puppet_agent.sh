@@ -6,23 +6,24 @@
 #sudo -S -k -i
 #sudo -S -k -i <<< "DevOps12";
 
-# set source
+echo "set source";
 sudo -i source /etc/profile.d/puppet-agent.sh;
 
-# export path
+echo "export path";
 sudo -i export PATH=/opt/puppetlabs/bin:$PATH;
     
-# puppet version
+echo "puppet version";
 sudo -i /opt/puppetlabs/bin/puppet -V;
 
-# set config
+echo "set config";
 sudo -i /opt/puppetlabs/bin/puppet config set server puppet --section main;
+sudo -i /opt/puppetlabs/bin/puppet config set dns_alt_names ip-172-31-31-109.ap-south-1.compute.internal,ip-172-31-29-129.ap-south-1.compute.internal --section main;
 
 # # set config from file
 # sudo -i -u edureka cat ./configfile.txt > /etc/puppetlabs/puppet/puppet.conf <<< "DevOps12";
 # #echo "[main]\nserver = puppet\ndns_alt_names=ip-172-31-31-109.ap-south-1.compute.internal,ip-172-31-29-129.ap-south-1.compute.internal" > /etc/puppetlabs/puppet/puppet.conf
 
-# verify the set config
+echo "verify the set config";
 sudo -i cat /etc/puppetlabs/puppet/puppet.conf;
 
 # # run ssl bootstrap
