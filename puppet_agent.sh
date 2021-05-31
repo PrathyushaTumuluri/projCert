@@ -20,5 +20,8 @@ export PATH=/opt/puppetlabs/bin:$PATH
 cat ./configfile.txt > /etc/puppetlabs/puppet/puppet.conf
 # echo "[main]\nserver = puppet\ndns_alt_names=ip-172-31-31-109.ap-south-1.compute.internal,ip-172-31-29-129.ap-south-1.compute.internal" > /etc/puppetlabs/puppet/puppet.conf
 
-# run ssl bootstrap
-/opt/puppetlabs/bin/puppet ssl bootstrap
+# verify the set config
+cat /etc/puppetlabs/puppet/puppet.conf
+
+# # run ssl bootstrap
+# /opt/puppetlabs/bin/puppet ssl bootstrap
