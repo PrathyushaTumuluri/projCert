@@ -1,0 +1,24 @@
+---
+- name: Playbook to install chrome
+#  hosts: localhost
+#  hosts: 172.31.29.129
+  hosts: kslave1
+
+  tasks:
+
+    - name: install chromium
+      apt:
+        name: chromium
+        state: present
+
+    - name: install chromedriver
+      shell: wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+      register: chrome_driver_install
+
+    - debug: msg="{{ chrome_driver_install }}"
+    
+    - name: unzip chromedriver
+      ansible.builtin.unarchive: 
+        src: /home/edureka/chromedriver_linux64.zip
+        dest: /home/edureka/Documents
+        remote_src: yes
