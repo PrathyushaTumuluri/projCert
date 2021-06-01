@@ -33,3 +33,8 @@
 #         name: chromium
 #         state: present
 
+#    - name: chromedriver
+#      apt:
+#        name: chromedriver
+#        state: present
+
