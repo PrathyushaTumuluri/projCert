@@ -1,7 +1,7 @@
 ---
 - name: Playbook to install chrome
-  hosts: localhost
-#  hosts: kslave1
+#  hosts: localhost
+  hosts: kslave1
   vars:
     - apt_file: /etc/apt/sources.list.d/google-chrome.list
 
