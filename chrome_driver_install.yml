@@ -5,12 +5,20 @@
   hosts: kslave1
 
   tasks:
-
+  
     - name: install chromedriver
-      shell: wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+      get_url: 
+        url: https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+        dest: /home/edureka
       register: chrome_driver_install
 
     - debug: msg="{{ chrome_driver_install }}"
+
+#     - name: install chromedriver
+#       shell: wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+#       register: chrome_driver_install
+
+#     - debug: msg="{{ chrome_driver_install }}"
     
     - name: unzip chromedriver
       ansible.builtin.unarchive: 
