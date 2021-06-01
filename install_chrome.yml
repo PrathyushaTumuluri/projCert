@@ -2,8 +2,8 @@
 - name: Playbook to install chrome
   hosts: kslave1
   become: yes
-  vars:
-    - apt_file: /etc/apt/sources.list.d/google-chrome.list
+#   vars:
+#     - apt_file: /etc/apt/sources.list.d/google-chrome.list
 
   tasks:
 
