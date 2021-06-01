@@ -8,11 +8,11 @@
                   <include name="verify" />
               </methods>
             </class>
-            <class name="com.prathyusha.devops.project.AppTestChrome">
+<!--             <class name="com.prathyusha.devops.project.AppTestChrome">
               <methods>
                   <include name="verify" />
               </methods>
-            </class>
+            </class> -->
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
