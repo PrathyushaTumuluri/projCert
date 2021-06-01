@@ -10,8 +10,10 @@
       shell: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 
     - name: add chrome repo
-      copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{ apt_file }} owner=edureka mode=644
-      become: root
+      shell: sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> {{ apt_file }}'
+
+#     - name: add chrome repo
+#       copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{ apt_file }} owner=edureka mode=644
 
     - name: update apt cache
       apt: update_cache=yes
