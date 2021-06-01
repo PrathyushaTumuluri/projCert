@@ -42,10 +42,7 @@
       ansible.builtin.unarchive: 
         src: /home/edureka/chromedriver_linux64.zip
         dest: /home/edureka/Documents
-        register: chrome_driver_unzip
         remote_src: yes
-
-    - debug: msg="{{ chrome_driver_unzip }}"
 
 #     - name: unzip chromedriver
 #       shell: unzip chromedriver_linux64.zip
