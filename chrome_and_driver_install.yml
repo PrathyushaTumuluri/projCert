@@ -36,13 +36,21 @@
       register: chrome_driver_install
 
     - debug: msg="{{ chrome_driver_install }}"
-
+    
     - name: unzip chromedriver
-      shell: unzip chromedriver_linux64.zip
+      ansible.builtin.unarchive: 
+      src: chromedriver_linux64.zip
+      dest: /home/edureka/Documents
       register: chrome_driver_unzip
-      chdir: /home/edureka/Documents
 
     - debug: msg="{{ chrome_driver_unzip }}"
+
+#     - name: unzip chromedriver
+#       shell: unzip chromedriver_linux64.zip
+#       chdir: /home/edureka/Documents
+#       register: chrome_driver_unzip
+
+#     - debug: msg="{{ chrome_driver_unzip }}"
     
 #     - name: copy chromedriver to documents
 #       shell: cp ./chromedriver /home/edureka/Documents
