@@ -1,0 +1,12 @@
+---
+- name: Playbook to install chromium
+  hosts: kslave1
+  become: yes
+
+  tasks:
+      
+    - name: Install chromium
+      apt:
+        name: chromium-browser
+        state: present
+        update_cache: yes
