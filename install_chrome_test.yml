@@ -25,16 +25,16 @@
 #       apt: update_cache=yes
 #       when: chrome_apt_exists.rc == 1
 
-#    - name: install Google Chrome
-#      apt: pkg=google-chrome-stable state=installed
+#     - name: install Google Chrome
+#       apt: pkg=google-chrome-stable state=installed
 
 #     - name: install chromium
 #       apt:
 #         name: chromium
 #         state: present
 
-#    - name: chromedriver
-#      apt:
-#        name: chromedriver
-#        state: present
+#     - name: chromedriver
+#       apt:
+#         name: chromedriver
+#         state: present
 
