@@ -1,7 +1,8 @@
 ---
 - name: Playbook to install chrome
 #  hosts: localhost
-  hosts: 172.31.29.129
+#  hosts: 172.31.29.129
+  hosts: kslave1
   vars:
     - apt_file: /etc/apt/sources.list.d/google-chrome.list
 
@@ -39,9 +40,10 @@
     
     - name: unzip chromedriver
       ansible.builtin.unarchive: 
-        src: chromedriver_linux64.zip
+        src: /home/edureka/chromedriver_linux64.zip
         dest: /home/edureka/Documents
         register: chrome_driver_unzip
+        remote_src: yes
 
     - debug: msg="{{ chrome_driver_unzip }}"
 
