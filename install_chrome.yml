@@ -12,11 +12,14 @@
     - name: add chrome repo
       shell: sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> {{ apt_file }}'
 
+    - name: apt update
+      shell: sudo sh -c 'apt update'
+
 #     - name: add chrome repo
 #       copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{ apt_file }} owner=edureka mode=644
 
-    - name: update apt cache
-      apt: update_cache=yes
+#     - name: update apt cache
+#       apt: update_cache=yes
 
     - name: install Google Chrome
       apt: pkg=google-chrome-stable state=installed
