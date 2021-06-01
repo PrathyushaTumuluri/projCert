@@ -1,10 +1,9 @@
 ---
-- name: Playbook to install ansible
+- name: Playbook to install git
   hosts: kslave1
   become: yes
 
   tasks:
-
     - name: Install git
       apt:
         name: git
