@@ -38,3 +38,17 @@
 #         name: chromedriver
 #         state: present
 
+    - name: install chromedriver
+      shell: wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+      register: chrome_driver_install
+      ignore_errors: true
+
+    - debug: msg="{{ chrome_driver_install }}"
+
+    - name: unzip chromedriver
+      shell: unzip chromedriver_linux64.zip
+      register: chrome_driver_unzip
+      ignore_errors: true
+
+    - debug: msg="{{ chrome_driver_unzip }}"
+
