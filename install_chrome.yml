@@ -14,7 +14,7 @@
 #       shell: sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> {{ apt_file }}'
 
     - name: apt update
-      shell: sudo sh -c 'apt update'
+      shell: sh -c 'apt update'
 
 #     - name: add chrome repo
 #       copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{ apt_file }} owner=edureka mode=644
@@ -29,4 +29,4 @@
       shell: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
     - name: install chrome
-      shell: sudo apt install ./google-chrome-stable_current_amd64.deb
+      shell: apt install ./google-chrome-stable_current_amd64.deb
