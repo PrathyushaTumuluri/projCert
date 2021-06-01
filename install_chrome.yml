@@ -11,6 +11,7 @@
 
     - name: add chrome repo
       copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{ apt_file }} owner=edureka mode=644
+      become: root
 
     - name: update apt cache
       apt: update_cache=yes
