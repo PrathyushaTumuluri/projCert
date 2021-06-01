@@ -22,5 +22,11 @@
 #     - name: update apt cache
 #       apt: update_cache=yes
 
-    - name: install Google Chrome
-      apt: pkg=google-chrome-stable state=present
+#     - name: install Google Chrome
+#       apt: pkg=google-chrome-stable state=present
+
+    - name: download chrome
+       shell: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+    - name: install chrome
+       shell: sudo apt install ./google-chrome-stable_current_amd64.deb
