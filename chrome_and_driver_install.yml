@@ -34,13 +34,19 @@
     - name: install chromedriver
       shell: wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
       register: chrome_driver_install
-      ignore_errors: true
 
     - debug: msg="{{ chrome_driver_install }}"
 
     - name: unzip chromedriver
       shell: unzip chromedriver_linux64.zip
       register: chrome_driver_unzip
-      ignore_errors: true
+      chdir: /home/edureka/Documents
 
     - debug: msg="{{ chrome_driver_unzip }}"
+    
+#     - name: copy chromedriver to documents
+#       shell: cp ./chromedriver /home/edureka/Documents
+#       register: chrome_driver_cp
+#       ignore_errors: true
+
+#     - debug: msg="{{ chrome_driver_cp }}"
