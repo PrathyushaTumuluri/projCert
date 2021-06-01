@@ -6,11 +6,6 @@
 
   tasks:
 
-    - name: install chromium
-      apt:
-        name: chromium
-        state: present
-
     - name: install chromedriver
       shell: wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
       register: chrome_driver_install
