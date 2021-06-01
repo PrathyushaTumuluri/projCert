@@ -28,3 +28,8 @@
 #    - name: install Google Chrome
 #      apt: pkg=google-chrome-stable state=installed
 
+#     - name: install chromium
+#       apt:
+#         name: chromium
+#         state: present
+
