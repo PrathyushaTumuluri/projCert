@@ -17,4 +17,4 @@ echo "add code to manifest file...";
 cat ./puppet_docker_class.txt > /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
 
 echo "verify manifest file...";
-/etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
+cat /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
