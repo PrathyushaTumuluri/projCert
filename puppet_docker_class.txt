@@ -4,9 +4,9 @@ class install_docker {
   include ::docker
 
   # or you can customise the install
-  class { 'docker' :
-    manage_package => true,
-    package_name   => 'docker-engine',
-  }
+ # class { 'docker' :
+   # manage_package => true,
+   # package_name   => 'docker-engine',
+ # }
 
 }
