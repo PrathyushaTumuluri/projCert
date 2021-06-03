@@ -15,7 +15,7 @@ sudo touch /etc/puppetlabs/code/environments/production/manifests/installdocker.
 sudo chmod 777 /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
 
 echo "add code to manifest file...";
-sudo -i cat var/lib/jenkins/workspacecreate_manifest_for_docker/puppet_docker_class.txt > /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
+sudo -i cat /var/lib/jenkins/workspace/create_manifest_for_docker/puppet_docker_class.txt > /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
 
 echo "verify manifest file...";
 sudo cat /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
