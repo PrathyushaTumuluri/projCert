@@ -3,10 +3,13 @@
 echo "cd to puppet modules...";
 cd /etc/puppetlabs/code/environments/production/modules;
 
+echo "present working directory:";
+pwd;
+
 # sudo /opt/puppetlabs/bin/puppet module install garethr-docker
 
 echo "install garethr-docker module...";
-sudo /opt/puppetlabs/bin/puppet module install garethr-docker --version 19.03.6;
+sudo /opt/puppetlabs/bin/puppet module install garethr-docker --version 19;
 
 # cd /etc/puppetlabs/code/environments/production/manifests
 
