@@ -17,7 +17,7 @@ echo "create manifest file...";
 sudo touch /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
 
 echo "add code to manifest file...";
-sudo -i cat ./puppet_docker_class.txt > /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
+sudo sh -c "cat ./puppet_docker_class.txt > /etc/puppetlabs/code/environments/production/manifests/installdocker.pp";
 
 echo "verify manifest file...";
 sudo cat /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
