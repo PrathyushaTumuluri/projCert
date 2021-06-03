@@ -4,7 +4,7 @@ class install_docker {
   # include ::docker
 
 class { 'docker':
-  version => '0.5.5',
+  version => '19.03.6',
 }
   
  # class { 'docker' :
