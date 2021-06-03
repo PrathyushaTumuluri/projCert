@@ -14,7 +14,7 @@ sudo /opt/puppetlabs/bin/puppet module install garethr-docker;
 # cd /etc/puppetlabs/code/environments/production/manifests
 
 echo "create manifest file...";
-touch /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
+sudo touch /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
 
 echo "add code to manifest file...";
 sudo cat ./puppet_docker_class.txt > /etc/puppetlabs/code/environments/production/manifests/installdocker.pp;
