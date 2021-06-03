@@ -9,7 +9,7 @@ pwd;
 # sudo /opt/puppetlabs/bin/puppet module install garethr-docker
 
 echo "install garethr-docker module...";
-sudo /opt/puppetlabs/bin/puppet module install garethr-docker --version 19;
+sudo /opt/puppetlabs/bin/puppet module install garethr-docker;
 
 # cd /etc/puppetlabs/code/environments/production/manifests
 
