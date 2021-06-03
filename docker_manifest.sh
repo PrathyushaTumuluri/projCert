@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "cd to puppet modules...";
-cd /etc/puppetlabs/code/environments/production/modules;
+# echo "cd to puppet modules...";
+# cd /etc/puppetlabs/code/environments/production/modules;
 
-echo "present working directory:";
-pwd;
+# echo "present working directory:";
+# pwd;
 
 # sudo /opt/puppetlabs/bin/puppet module install garethr-docker
 
