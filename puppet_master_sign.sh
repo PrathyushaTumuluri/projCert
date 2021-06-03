@@ -17,10 +17,10 @@ echo $certname;
 # fi
 
 if grep -q "No" <<< $certname; then
-  echo "No certificates to sign..";
+echo "No certificates to sign..";
 else
-  echo "sign certificate...";
-#  sudo -i puppetserver ca sign --certname $certname;
+echo "sign certificate...";
+sudo -i puppetserver ca sign --certname $certname;
 fi
 
 # if [ "$certname" == *"No certificates to list"* ]; then
