@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep 60;
+#sleep 60;
 
 echo "get certs list";
 sudo -i puppetserver ca list;
@@ -16,19 +16,19 @@ echo $certname;
 #   sudo -i puppetserver ca sign --certname $certname;
 # fi
 
-if grep -q "No" <<< $certname; then
-echo "No certificates to sign..";
+# if grep -q "No" <<< $certname; then
+# echo "No certificates to sign..";
+# else
+# echo "sign certificate...";
+# sudo -i puppetserver ca sign --certname $certname;
+# fi
+
+if [ echo $certname == *"No certificates to list"* ]; then
+echo "No certificates to sign...";
 else
-echo "sign certificate...";
+echo "Sign certificate...";
 sudo -i puppetserver ca sign --certname $certname;
 fi
-
-# if [ "$certname" == *"No certificates to list"* ]; then
-#   echo "No certificates to sign..";
-# else
-#   echo "sign certificate";
-#   sudo -i puppetserver ca sign --certname $certname;
-# fi
 
 echo "list signed certs";
 sudo -i puppetserver ca list -a;
