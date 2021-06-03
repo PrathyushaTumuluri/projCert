@@ -17,4 +17,5 @@ echo "verify the set config";
 sudo -i cat /etc/puppetlabs/puppet/puppet.conf;
 
 echo "run ssl bootstrap";
-sudo -i /opt/puppetlabs/bin/puppet ssl bootstrap &
+# sudo -i /opt/puppetlabs/bin/puppet ssl bootstrap &
+sudo -i /opt/puppetlabs/bin/puppet ssl bootstrap --waitforcert 0;
