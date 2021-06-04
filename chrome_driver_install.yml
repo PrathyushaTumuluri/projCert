@@ -1,5 +1,5 @@
 ---
-- name: Playbook to install chrome
+- name: Playbook to install chrome driver
 #  hosts: localhost
 #  hosts: 172.31.29.129
   hosts: kslave1
