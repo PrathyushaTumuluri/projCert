@@ -1,5 +1,9 @@
 #!/bin/bash
 
+wget https://apt.puppet.com/puppet6-release-focal.deb;
+
+dpkg -i puppet6-release-focal.deb;
+
 echo "set source";
 sudo -i source /etc/profile.d/puppet-agent.sh;
 
