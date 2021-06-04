@@ -17,6 +17,7 @@ if grep -q "No certificates to list" <<< $certdata; then
 else
   echo "sign certificate";
   sudo -i puppetserver ca sign --certname $certname;
+#  sudo -i puppetserver ca sign --all;
 fi
 
 echo "list signed certs";
