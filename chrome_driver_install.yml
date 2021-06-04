@@ -20,8 +20,8 @@
 
 #     - debug: msg="{{ chrome_driver_install }}"
     
-#     - name: unzip chromedriver
-#       ansible.builtin.unarchive: 
-#         src: /home/edureka/chromedriver_linux64.zip
-#         dest: /home/edureka/Documents
-#         remote_src: yes
+    - name: unzip chromedriver
+      ansible.builtin.unarchive: 
+        src: /home/edureka/chromedriver_linux64.zip
+        dest: /home/edureka/Documents
+        remote_src: yes
